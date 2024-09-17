@@ -1,14 +1,17 @@
 // Imports go first
-import { firePottery } from "./klin.mjs"
-import { makePottery } from "./potteryWheel.mjs"
-import { toSellOrNotToSell, usePottery } from "./potteryCatalog.mjs"
+import { firePottery } from "./klin.js"
+import { makePottery } from "./potteryWheel.js"
+import { toSellOrNotToSell, usePottery } from "./potteryCatalog.js"
+import { PotteryList } from "./potteryList.js"
+
 debugger
+
 // Make 5 pieces of pottery at the wheel
-let mug = makePottery("mug", 1.5, 4)
-let vase = makePottery("vase", 3, 6)
+let mug = makePottery("mug", 3, 4)
+let vase = makePottery("vase", 5, 6)
 let plate = makePottery("plate", 2, 1)
 let largeVase = makePottery("Large Vase", 9, 12)
-let largeMug = makePottery("Large Mug", 8, 5)
+let largeMug = makePottery("Large Mug", 12, 5)
 
 //console.log(mug, vase, plate, largeVase)
 // Fire each piece of pottery in the kiln
@@ -31,3 +34,10 @@ let anotherOne5 = toSellOrNotToSell(test5)
 
 // Invoke the component function that renders the HTML list
 
+const potteryHTML = PotteryList();
+
+
+
+const potteryListContainer = document.querySelector(".potteryList");
+
+potteryListContainer.innerHTML = potteryHTML;

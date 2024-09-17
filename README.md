@@ -120,12 +120,27 @@ In the `main.js` module, invoke the `PotteryList` component function. Take its r
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Explain how you got the HTML, with the correct data, displayed in the browser?
-   > Your answer here
+
+   > So once I've generated the HTML using PotteryList function along with the usePottery function that
+   will give me the new array of objects with the correct properties. Per the instructions we then create a new element tag in out index.html. This element is going to be <article> with a class of "potteryList".
+   So once in the function we create a variable that contains all the objects we need after invoking the usePottery function. we then run that through a for loop and taking on object(pottery) at a time and then referencing them in between each the html tags given to us. We do this by concatenating using ${} which will reference the property of the object (ex:pottery.id). The long string is then stored in the html variable and returned at the end of the function. Back to main.js we will invoke potteryList function and store it into yet another variable. We then make a second variable in main that will make direct reference to the <article class= "potteryList"> in our index.html . we do this by using querySelector method. Finally we use our variable that references where we want the HTML and use the innerHTML method to reference the inside of the article tags in index and replace the insides with our HTML variable.
+
 2. In the **PotteryList** module, when you iterate your pottery, you need to show the evidence of what the **weight** property's value is for the 2nd piece of pottery. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+   
+   > [Paste your video's public URL here](https://www.loom.com/share/7745aea4349a4fb2a737f6e2565d0659)
+
+
 3. The **PotteryWheel** module has a single function named `makePottery`. Why doesn't that module have all of the other code in it?
-   > Your answer here
+
+   > This Functions only responsibility is to generate an object with the given parameters. As long as we are passing valid arguments we should end up with an object with all the parameters filled in. So in short this is all it needs for now.
+
+
 4. The pottery shop has learned that there is a set of customers that are willing to buy cracked pottery at a discounted price of $2.50. That means that the cracked pottery should now be displayed in the catalog. Explain the changes that this new business strategy would cause to your algorithm.
-   > Your answer here
+
+   > first we change toSellOrNotToSell function in the potteryCatalog module. We could go about this in a few ways but i decided to create another variable that will only hold cracked pottery array. In this case i should only have one object in this variable. Scope was important to keep things separate. Again i could of used the usePottery function and added my potteryInventory with discountedPottery but i opted again to keep things separate and exported a new function for discounted pottery. Finally I tweaked the html to add text making it visible that this item is discounted. I thought it was neat so I tried using and else statement to console log a message if there was not cracked pottery for the day. to do that I inserted my for loop inside an if statement to properly use else. The return result should just be both strings added together which should display everything we need. 
+
+
 5. In the **Kiln** module, you have a `firePottery()` function. You need to demonstrate how to use the debugger to verify the values of the parameters for that function when your code runs. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+
+
+   > https://www.loom.com/share/f0f8afee2f904a2dbb90812499743f2b
